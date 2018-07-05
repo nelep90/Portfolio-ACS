@@ -1,5 +1,6 @@
 <template>
   <div id="app">
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css" integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt" crossorigin="anonymous">
     <header>
       <h1>This is header</h1>
     </header>
@@ -8,8 +9,15 @@
     <footer>
       <div class="left_footer">
         <h3>Contact</h3>
-     </div>
-    </footer>
+        <p><img class="cnt_logo_footer" src="./assets/images/png/placeholder.png" alt="contact">18 Rue de la Cassotte 25000 Besancon France</p>
+       <p><img class="cnt_logo_footer" src="./assets/images/png/smartphone-call.png" alt="contact">+33 7 69 21 70 65</p>
+         <p><img class="cnt_logo_footer" src="./assets/images/png/message-closed-envelope.png" alt="contact">nenad.p@protonmail.com</p>
+ <a href="https://www.linkedin.com/in/nenadpasajlic/"> <i class="fab fa-linkedin-in size:5x cnt_logo_footer"></i></a>
+ <a href="https://github.com/nelep90"> <i class="fab fa-github size:5x cnt_logo_footer"></i> </a>
+     </div> 
+<br/>
+ <p class="center gray">Copyright Nenad Pasajlic</p>
+   </footer>
   </div>
   
 </template>
@@ -27,6 +35,13 @@ export default {
 </script>
 
 <style>
+.center{
+  text-align: center;
+  justify-content: center;
+}
+.gray{
+color: gray;
+}
   #app {
     font-family: 'Avenir', Helvetica, Arial, sans-serif;
     -webkit-font-smoothing: antialiased;
@@ -36,8 +51,7 @@ export default {
     margin-top: 60px;
   }
   /*header*/
-  header {
-    
+  header {    
   margin: 0;
     padding: 0;
   height: 200px;
@@ -52,16 +66,29 @@ export default {
 
   /*footer */
 footer{
-  color: white;
-  bottom: 0;
-  position: fixed;
-background-color: black;
-height: 15%;
 width: 100%;
+height: auto;
+padding:  0 2%; 
+color: white;
+bottom: 0;
+position: fixed;
+background-color: black;
+
 }
 .left_footer{
-  width: 50%;
-  color: aliceblue;
-  background-color: rebeccapurple;
+  text-align: left; 
+  width: 70%;
+  color: gray;
+ 
+  height: auto;
+}
+
+.cnt_logo_footer{
+  width: 25px;
+  height: 25px;
+  float: left;
+  padding-right: 10px;
+  font-size:32px;
+  color: gray; 
 }
 </style>

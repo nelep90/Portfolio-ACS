@@ -19,12 +19,20 @@ export default {
                 name: 'Home'
             },
             {
-                url: '/experiences',
-                name: 'Experiences'
+                url: '/cv',
+                name: 'CV'
             },
             {
                 url: '/projets',
                 name: 'Projets'
+            },
+              {
+                url: '/about',
+                name: 'About'
+            },
+            {
+                url: '/contact',
+                name: 'Contact'
             },
         ]
     }

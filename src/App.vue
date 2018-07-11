@@ -1,9 +1,9 @@
 <template>
   <div id="app">
         <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css" integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt" crossorigin="anonymous">
-    <header>
+    <!-- <header>
       <h1>This is header</h1>
-    </header>
+    </header> -->
     <menu-header>
       
     </menu-header>
@@ -49,7 +49,8 @@ color: gray;
     -moz-osx-font-smoothing: grayscale;
     text-align: center;
     color: #2c3e50;
-    margin-top: 60px;
+    margin: 0;
+    padding: 0;
   }
   /*header*/
   header {    
@@ -58,7 +59,7 @@ color: gray;
   height: 200px;
   color: #ffffff;
   background-color: red;
-  /*background-image: url("assets/images/mobile phone_header.jpg"); */
+  background:url('https://www.qdtricks.net/wp-content/uploads/2016/05/hd-road-wallpaper.jpg') no-repeat local;
   background-repeat: no-repeat;
   background-position: center;
 

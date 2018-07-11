@@ -3,6 +3,9 @@
 import Vue from 'vue'
 import App from './App'
 import router from './router'
+import {vueAccordion} from 'vue-accordion'
+
+Vue.component('vue-accordion', vueAccordion)
 
 Vue.config.productionTip = false
 

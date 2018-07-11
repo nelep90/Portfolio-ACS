@@ -7,6 +7,13 @@ import Projects from '@/components/Projects'
 import About from '@/components/About'
 import Contact from '@/components/Contact'
 
+import {vueAccordion} from 'vue-accordion'
+
+Vue.component('vue-accordion', vueAccordion)
+
+export {vueAccordion}
+
+
 Vue.use(Router)
 
 export default new Router({

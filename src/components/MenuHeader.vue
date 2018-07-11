@@ -1,11 +1,36 @@
 <template>
-    <nav>
-        <ul>
-            <li v-for="menuElem in menuElements">
-                <router-link :to="menuElem.url">{{menuElem.name}}</router-link>
-            </li>
-        </ul>
-    </nav>
+<div>
+     <router-link to="/Home">
+     <section class="x">
+  <h1 class="white">Home</h1>    
+   </section>
+   </router-link>
+    
+   <router-link to="/Cv">
+<section class="y">
+  <h1 class="white">CV</h1>
+</section>
+  </router-link>
+  
+<router-link to="/Projects">
+<section class="x">
+  <h1 class="white">Projects</h1>
+</section>
+</router-link>
+
+<router-link to="/About">
+<section class="y">
+  <h1 class="white">About</h1>
+</section>
+</router-link>
+
+<router-link to="/Contact">
+<section class="x">
+  <h1 class="white">Contact</h1>
+</section>
+</router-link>
+    
+    </div>
 </template>
 
 <script>
@@ -54,4 +79,45 @@ export default {
             display: block;
         }
     }
+    /*slider */
+    .white{
+  color: white;
+}
+.x {
+float:left;
+width:100px;
+height:600px;
+background: url('http://bedirhan.hol.es/wp-content/gallery/Resimler/manzara-resim-4.jpg') no-repeat local;
+transition: all 0.5s linear;
+-webkit-transition: all 0.5s linear;
+-moz-transition: all 0.5s linear;
+margin:0;
+padding:0;
+}
+
+.x:hover {
+transition: all 0.5s linear;
+-webkit-transition: all 0.5s linear;
+-moz-transition: all 0.5s linear;
+width:400px;
+height:600px;
+
+}
+.y {
+float:left;
+width:100px;
+height:600px;
+background:url('https://www.qdtricks.net/wp-content/uploads/2016/05/hd-road-wallpaper.jpg') no-repeat local;
+transition: all 0.5s linear;
+-webkit-transition: all 0.5s linear;
+-moz-transition: all 0.5s linear;
+}
+.y:hover {
+transition: all 0.5s linear;
+-webkit-transition: all 0.5s linear;
+-moz-transition: all 0.5s linear;
+width:400px;
+height:600px;
+}
+
 </style>

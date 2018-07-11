@@ -4,7 +4,9 @@
     <header>
       <h1>This is header</h1>
     </header>
-    <menu-header></menu-header>
+    <menu-header>
+      
+    </menu-header>
     <router-view/>
     <footer>
       <div class="left_footer">
@@ -21,7 +23,6 @@
   </div>
   
 </template>
-
 <script>
 
 import MenuHeader from './components/MenuHeader'  

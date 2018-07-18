@@ -24,7 +24,7 @@
 
 <script>
 export default {
-  name: 'Project',
+  name: 'Projects',
   data () {
     return {
     }

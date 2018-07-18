@@ -1,15 +1,16 @@
 <template>
   <div id="app">
         <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css" integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt" crossorigin="anonymous">
-    <header>
-      <img class="header" src="./assets/images/mobile phone_header.jpg"> 
+    <header>      
+      <h1>Salut Hello Zdravo</h1> 
+      <h2>My name is Nenad Pasajlic and welcome to my portfolio page</h2>
     </header>
      <menu-header></menu-header>
     <router-view/>
 <section class="main">
         <h1>this is main</h1>
          </section>
-    <footer>
+    <footer class="footer">
       <div class="left_footer">
         <h4>Contact</h4>
         <p><img class="cnt_logo_footer" src="./assets/images/png/placeholder.png" alt="contact">18 Rue de la Cassotte 25000 Besancon France</p>
@@ -51,39 +52,44 @@ body{
 color: gray;
 }
   #app {
+    height: auto;
     padding: 0;
     margin: 0;
     font-family: 'Avenir', Helvetica, Arial, sans-serif;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     text-align: center;
-    color: #2c3e50;
-    margin: 0;
-    padding: 0;
+    color: #2c3e50;    
+  }
+  .main{
+    padding: 10% 0;
   }
   /*header*/
-  .header {    
+  header {    
   width: 100%;
+  height: 200px; 
   margin: 0;
-  padding: 0;
-  height: 150px;
-  color: #ffffff; 
-  /* background-image:url('./assets/images/mobile phone_header.jpg');  */
+  padding: 0;  
+  background: url("./assets/images/header.jpg");
   background-repeat: no-repeat;
   background-position: center;
-  background-size: 100%;
+  color: white;
+  
 }
 
   /*footer */
 footer{
 width: 100%;
+bottom:0;
+right: 0;
 bottom: 0;
-position: absolute;
+left: 0;
 height: auto;
 color: white;
 background-color: black;
+
 }
-footer p{
+footer  p{
   font-size: 9px;
 }
 .left_footer{

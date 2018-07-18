@@ -1,16 +1,16 @@
 <template>
-<h1>Contact</h1>
-
-
+<div²>
+	
+</div>
 </template>
 
 <script>
 export default {
   name: 'Contact',
   data () {
-    return {
-    }
-  }
+    
+  }, 
+   
 }
 </script>
 

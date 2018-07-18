@@ -126,42 +126,42 @@ height:150px;
     .white{
   color: white;
 }
-.x {
-float:left;
- width:100px;
- height:600px;
-background: url('http://bedirhan.hol.es/wp-content/gallery/Resimler/manzara-resim-4.jpg') no-repeat local;
-transition: all 0.5s linear;
- -webkit-transition: all 0.5s linear;
- -moz-transition: all 0.5s linear;
- margin:0;
- padding:0;
- }
+// .x {
+// float:left;
+// width:100px;
+// height:600px;auto
+// background: url('http://bedirhan.hol.es/wp-content/gallery/Resimler/manzara-resim-4.jpg') no-repeat local;
+// transition: all 0.5s linear;
+// -webkit-transition: all 0.5s linear;
+// -moz-transition: all 0.5s linear;
+// margin:0;
+// padding:0;
+// }
 
- .x:hover {
- transition: all 0.5s linear;
- -webkit-transition: all 0.5s linear;
- -moz-transition: all 0.5s linear;
- width:400px;
- height:600px;
+// .x:hover {
+// transition: all 0.5s linear;
+// -webkit-transition: all 0.5s linear;
+// -moz-transition: all 0.5s linear;
+// width:400px;
+// height:600px;
 
- }
- .y {
- float:left;
-width:100px;
-height:600px;
- background:url('https://www.qdtricks.net/wp-content/uploads/2016/05/hd-road-wallpaper.jpg') no-repeat local;
- transition: all 0.5s linear;
- -webkit-transition: all 0.5s linear;
- -moz-transition: all 0.5s linear;
- }
- .y:hover {
- transition: all 0.5s linear;
- -webkit-transition: all 0.5s linear;
- -moz-transition: all 0.5s linear;
- width:400px;
- height:600px;
- }
+// }
+// .y {
+// float:left;
+// width:100px;
+// height:600px;
+// background:url('https://www.qdtricks.net/wp-content/uploads/2016/05/hd-road-wallpaper.jpg') no-repeat local;
+// transition: all 0.5s linear;
+// -webkit-transition: all 0.5s linear;
+// -moz-transition: all 0.5s linear;
+// }
+// .y:hover {
+// transition: all 0.5s linear;
+// -webkit-transition: all 0.5s linear;
+// -moz-transition: all 0.5s linear;
+// width:400px;
+// height:600px;
+// }
 }
 
 </style>

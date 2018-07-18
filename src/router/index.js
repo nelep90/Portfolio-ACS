@@ -7,9 +7,7 @@ import Projects from '@/components/Projects'
 import About from '@/components/About'
 import Contact from '@/components/Contact'
 
-import {vueAccordion} from 'vue-accordion'
 
-Vue.component('vue-accordion', vueAccordion)
 
 export {vueAccordion}
 
@@ -25,7 +23,7 @@ export default new Router({
     },
     {
       path: '/cv',
-      name: 'CV',
+      name: 'Cv',
       component: Cv
     },
     {

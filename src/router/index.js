@@ -1,18 +1,10 @@
 import Vue from 'vue'
 import Router from 'vue-router'
-import Experiences from '@/components/Experiences'
 import Home from '@/components/Home'
-import Cv from '@/components/Cv'
-import Projects from '@/components/Projects'
 import About from '@/components/About'
+import Cv from '@/components/Cv'
+import Projets from '@/components/Projets'
 import Contact from '@/components/Contact'
-
-import {vueAccordion} from 'vue-accordion'
-
-Vue.component('vue-accordion', vueAccordion)
-
-export {vueAccordion}
-
 
 Vue.use(Router)
 
@@ -24,27 +16,23 @@ export default new Router({
       component: Home
     },
     {
-      path: '/cv',
-      name: 'CV',
+      path: '/Projets',
+      name: 'Projets',
+      component: Projets
+    },
+    {
+      path: '/Cv',
+      name: 'Cv',
       component: Cv
     },
     {
-      path: '/experiences',
-      name: 'Experiences',
-      component: Experiences
-    },
-    {
-      path: '/projects',
-      name: 'Projects',
-      component: Projects
-    },
-    {
-      path: '/about',
+      path: '/About',
       name: 'About',
       component: About
-    },
+    }, 
+   
     {
-      path: '/contact',
+      path: '/Contact',
       name: 'Contact',
       component: Contact
     }

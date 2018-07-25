@@ -3,24 +3,38 @@
 import Vue from 'vue'
 import App from './App'
 import router from './router'
-import {vueAccordion} from 'vue-accordion'
+import VueRouter from 'vue-router'
+// import Home from './components/Home'
+// import Cv from './components/Cv'
+// import Projets from './components/Projets'
+// import About from './components/About'
+// import Contact from './components/Contact'
 
-Vue.component('vue-accordion', vueAccordion)
+
+Vue.use(VueRouter)
 
 Vue.config.productionTip = false
-
 export const globalStore = new Vue({
   data: {
     baseUrl: 'http://localhost/vue-portfolio-template/'
   }
 })
 
-/* eslint-disable no-new */
+// const routes = [
+//   {path: '/', component: Home},
+//   {path: '/Cv', component: Cv},
+//   {path: '/Projets', component: Projets},
+//   {path: '/About', component: About}, 
+//   {path: '/Contact', component: Contact}, 
+// ]
+
+// const router = new VueRouter({
+//   routes 
+// })
+
 new Vue({
   el: '#app',
+  validations: {},
   router,
-  components: { App },
-  template: '<App/>'
+  render: h => h(App)
 })
-
-

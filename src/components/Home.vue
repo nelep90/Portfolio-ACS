@@ -1,20 +1,12 @@
 <template>
-<div class="main">
-	<h1>Home</h1>
-   <menu-header>
-      
-    </menu-header>
-</div>
+    <div id="home">
+        <h1>Portfolio</h1>
+        <p>Bonjour bienvenue, sur mon portfolio</p>
+    </div>
 </template>
 
 <script>
-export default {
-  name: 'Home',
-  data () {
-    
-  }, 
-   
-}
+
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->

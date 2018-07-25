@@ -8,7 +8,7 @@
      <menu-header></menu-header>
     <router-view/>
 <section class="main">
-        <h1>this is main</h1>
+       
          </section>
     <footer class="footer">
       <div class="left_footer">

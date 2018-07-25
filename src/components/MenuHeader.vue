@@ -27,8 +27,8 @@
     <span></span>
     <span></span>
     
-    <ul id="menu">
-       <li v-for="menuElem in menuElements" v-bind:key="menuElem.name" class="nav-item">
+    <ul id="menu" >
+      <li   v-for="menuElem in menuElements" v-bind:key="menuElem.name" class="nav-item">
                                 <router-link :to="menuElem.url">{{menuElem.name}}</router-link>
                             </li>
     </ul>
@@ -105,6 +105,7 @@ a
 a:hover
 {
   color: tomato;
+
 }
 
 #menuToggle
@@ -132,8 +133,7 @@ a:hover
   cursor: pointer;
   
   opacity: 0; /* hide this */
-  z-index: 2; /* and place it over the hamburger */
-  
+  z-index: 2; /* and place it over the hamburger */  
   -webkit-touch-callout: none;
 }
 
@@ -143,8 +143,7 @@ a:hover
   width: 33px;
   height: 4px;
   margin-bottom: 5px;
-  position: relative;
-  
+  position: relative;  
   background: #cdcdcd;
   border-radius: 3px;
   
@@ -156,6 +155,9 @@ a:hover
               background 0.5s cubic-bezier(0.77,0.2,0.05,1.0),
               opacity 0.55s ease;
 }
+.showme{ 
+   display: none;
+ }
 
 #menuToggle span:first-child
 {
@@ -208,6 +210,7 @@ a:hover
 {
   padding: 10px 0;
   font-size: 22px;
+  
 }
 
 #menuToggle input:checked ~ ul

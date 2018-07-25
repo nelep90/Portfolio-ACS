@@ -2,6 +2,7 @@
 // (runtime-only or standalone) has been set in webpack.base.conf with an alias.
 import Vue from 'vue'
 import App from './App'
+import Vuelidate from 'vuelidate'
 import router from './router'
 import VueRouter from 'vue-router'
 // import Home from './components/Home'
@@ -12,6 +13,7 @@ import VueRouter from 'vue-router'
 
 
 Vue.use(VueRouter)
+Vue.use(Vuelidate)
 
 Vue.config.productionTip = false
 export const globalStore = new Vue({

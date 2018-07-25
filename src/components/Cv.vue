@@ -1,9 +1,15 @@
 <template>
 <div>
 
-<img class="img_cv" src="/static/pdf/cv.jpg" alt="cv">
-  <p>Sur ce lien vous pouvez retrouvez mon CV</p>
-<a href="./static/pdf/cv.pdf"><button class="btn"><i class="fa fa-download"></i> Telecharger</button> </a>
+<!-- <img class="img_cv" src="/static/pdf/cv.jpg" alt="cv">
+  
+<a href="./static/pdf/cv.pdf"><button class="btn"><i class="fa fa-download"></i> Telecharger</button> </a> -->
+
+  <pdf src="./static/pdf/cv.pdf"></pdf>
+<p>Sur ce lien vous pouvez telecharger mon CV</p>
+
+             <a href="../static/pdf/cv.pdf" class="button" download><i class="fa fa-download"></i>Telecharger</a>
+          
 </div>
 </template>
 

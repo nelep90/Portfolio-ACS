@@ -9,9 +9,11 @@
               <img class="image-projet" v-bind:src="`${im.picture_2}`" alt=""> -->
         
         <div class="pj txt" id="pj-des"> Description du projets : {{comp.description}}</div>
-   <div id="lk"> <button class="mybtn">    <a :href="`${ comp.url}`" target="_blank"> <p class="decouvrir" >Lien vers le site WEB</p></a></button> </div>
-
-
+   <div id="lk"> 
+     <button class="mybtn">    <a :href="`${ comp.url}`" target="_blank"> <p class="decouvrir" >Lien vers le site WEB</p></a></button>
+     
+      </div>
+      
         </div>
       </div>
     </div>

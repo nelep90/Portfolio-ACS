@@ -1,18 +1,21 @@
 <template>
 <div>
-   <h1> Voici la liste des différents projets que j'ai réalisé :</h1>
+   <h1> Mes projets</h1>
       <div class="text">
         <div v-bind:key="comp" v-for="comp in comps"> 
-          <div class="pj txt" id="pj-name">Nom du projet : {{comp.project_name}}</div>
-              <img class="image-projet" v-bind:src="`${comp.image}`" alt="">
+          <div class="pj_txt " id="pj-name"> {{comp.project_name}}</div>
+         <a :href="`${ comp.url}`" target="_blank">      <img class="image-projet" v-bind:src="`${comp.image}`" alt=""> </a>
                <!-- <div v-bind:key="im" v-for="im in lol"> 
               <img class="image-projet" v-bind:src="`${im.picture_2}`" alt=""> -->
         
-        <div class="pj txt" id="pj-des"> Description du projets : {{comp.description}}</div>
-		<div class="pj txt" id="pj-des">  Langage de programation utilisé: {{comp.programing_lng}}</div>
-		<div class="pj txt" id="pj-des"> Technologie utilisée: {{comp.techno}}</div>
-   <div id="lk"> <button class="mybtn">    <a :href="`${ comp.url}`" target="_blank"> <p class="decouvrir" >Lien vers le site WEB</p></a></button> </div>
-
+        <div class="pj txt" id="pj-des"> <b>Description du projets :</b> <br/> {{comp.description}}</div>
+		<div class="pj txt" id="pj-des"> <b>Langage de programation utilisé:</b><br/> {{comp.programing_lng}}</div>
+		<div class="pj txt" id="pj-des"><b>Technologie utilisée:</b><br/> {{comp.techno}}</div>
+   <div id="lk"> 
+       <!-- <button class="mybtn">  <a :href="`${ comp.url}`" target="_blank"> <p class="decouvrir" >Lien vers le site WEB</p></a></button> 
+      <button class="mybtn">  <a :href="`${ comp.url_git}`" target="_blank"> <p class="decouvrir" >Lien vers le Github</p></a></button>  -->
+      <a :href="`${ comp.url_git}`" target="_blank"> <i class="icon fab fa-github-square"> </i></a>
+      </div>
 
         </div>
       </div>
@@ -45,10 +48,10 @@ export default {
 
 <style>
 #lk {
-     padding-top: 5vh;
-    padding-bottom: 10vh;
+     padding-top: 5%;
+    padding-bottom: 5%;
 }
-.mybtn {
+/* .mybtn {
      text-decoration: none;
     color: #333;
     background-color: #fff;
@@ -74,7 +77,7 @@ export default {
     border-radius: 4px;
     display: flex;
     margin: auto;
-}
+} */
 .image-projet {
 width: 98%;
 margin: 0 auto;
@@ -85,7 +88,10 @@ margin: 0 auto;
     margin-right: auto;
   }
 .pj {
-  font-size: 3vh;
-  padding-top: 3vh;
+  font-size: 12px;
+  padding-top: 5%;
+}
+.icon{
+    font-size:35px;
 }
 </style>

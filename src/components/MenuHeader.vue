@@ -122,8 +122,8 @@ a:hover
 {
   display: block;
   position: relative;
-  top: 50px;
-  left: 50px;
+  top: 0px;
+  left: 15px;
   
   z-index: 1;
   
@@ -201,7 +201,7 @@ a:hover
 #menu
 {
   position: absolute;
-  width: 300px;
+  width: auto;
   margin: -100px 0 0 -50px;
   padding: 50px;
   padding-top: 125px;

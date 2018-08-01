@@ -1,9 +1,9 @@
 <template>
-<div>
+<div class="#app">
    <h1> Mes projets</h1>
       <div class="text">
         <div v-bind:key="comp" v-for="comp in comps"> 
-          <div class="pj_txt " id="pj-name"> {{comp.project_name}}</div>
+          <div class="lk" id="pj-name"><h3> {{comp.project_name}}</h3></div>
          <a :href="`${ comp.url}`" target="_blank">      <img class="image-projet" v-bind:src="`${comp.image}`" alt=""> </a>
                <!-- <div v-bind:key="im" v-for="im in lol"> 
               <img class="image-projet" v-bind:src="`${im.picture_2}`" alt=""> -->
@@ -15,6 +15,7 @@
        <!-- <button class="mybtn">  <a :href="`${ comp.url}`" target="_blank"> <p class="decouvrir" >Lien vers le site WEB</p></a></button> 
       <button class="mybtn">  <a :href="`${ comp.url_git}`" target="_blank"> <p class="decouvrir" >Lien vers le Github</p></a></button>  -->
       <a :href="`${ comp.url_git}`" target="_blank"> <i class="icon fab fa-github-square"> </i></a>
+      <hr class="line">
       </div>
 
         </div>
@@ -92,6 +93,11 @@ margin: 0 auto;
   padding-top: 5%;
 }
 .icon{
+  color: black;
     font-size:35px;
+}
+.line{
+  width: 80%;
+  opacity: 0.6;
 }
 </style>

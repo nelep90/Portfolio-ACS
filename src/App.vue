@@ -1,11 +1,13 @@
 <template>
+<body>
   <div id="app">
         <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css" integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt" crossorigin="anonymous">
     <header>      
-      <h1>Salut Hello Zdravo</h1> 
-      <h2>My name is Nenad Pasajlic and welcome to my portfolio page</h2>
+      <h1>Hello Salut  3драво </h1> 
+      <h2>My name is Nenad Pašajlić  and welcome to my portfolio page</h2>
+         <menu-header></menu-header>  
     </header>
-     <menu-header></menu-header>
+    
     <router-view/>
 <section class="main">
        
@@ -23,7 +25,7 @@
  <p class="center gray">Copyright Nenad Pasajlic</p>
    </footer>
   </div>
-  
+  </body>
 </template>
 <script>
 import MenuHeader from './components/MenuHeader'  
@@ -36,13 +38,23 @@ export default {
 </script>
 
 <style>
-html{
-  padding: 0;
+html,body {  
   margin: 0;
+    padding: 0;   
+    width: 100%;
+    
 }
-body{
-  height: 100%;
-}
+
+  #app {   
+    
+    width: 100%;
+    font-family: 'Avenir', Helvetica, Arial, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-align: center;
+    color: #2c3e50;    
+  }
+
 
 .center{
   text-align: center;
@@ -51,19 +63,11 @@ body{
 .gray{
 color: gray;
 }
-  #app {
-    height: auto;
-    padding: 0;
-    margin: 0;
-    font-family: 'Avenir', Helvetica, Arial, sans-serif;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-    text-align: center;
-    color: #2c3e50;    
-  }
   .main{
-    padding: 10% 0;
-  }
+    width: 100%;
+  margin: 0 auto;
+  padding: 0 auto;
+     }
   /*header*/
   header {    
   width: 100%;
@@ -92,12 +96,14 @@ background-color: black;
 footer  p{
   font-size: 9px;
 }
-.left_footer{
-  text-align: left; 
-  width: 100%;
-  color: gray;
-
-  height: auto;
+.left_footer{ 
+    text-align: left;
+    width: 100%;
+    color: gray;
+    margin-top: 5%;
+    margin-left: 5%;
+    padding: 2%;
+    height: auto;
 }
 
 .cnt_logo_footer{

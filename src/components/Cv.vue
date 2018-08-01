@@ -1,15 +1,11 @@
 <template>
-<div>
+<div class="#app">
 
-<!-- <img class="img_cv" src="/static/pdf/cv.jpg" alt="cv">
+ <img class="img_cv" src="/static/pdf/cv.jpg" alt="cv">
   
-<a href="./static/pdf/cv.pdf"><button class="btn"><i class="fa fa-download"></i> Telecharger</button> </a> -->
+<a href="./static/pdf/cv.pdf"><button class="btn"><i class="fa fa-download"></i> Telecharger</button> </a> 
 
-  <pdf src="./static/pdf/cv.pdf"></pdf>
-<p>Sur ce lien vous pouvez telecharger mon CV</p>
-
-             <a href="../static/pdf/cv.pdf" class="button" download><i class="fa fa-download"></i>Telecharger</a>
-          
+   
 </div>
 </template>
 
@@ -34,6 +30,7 @@ export default {
 
 
 .img_cv{
+  padding: 5%;
   width: 90%;
 }
 .btn {
@@ -45,6 +42,9 @@ export default {
     font-size: 20px;
 }
 
+cv_css{
+  margin: 5%;
+}
 /* Darker background on mouse-over */
 .btn:hover {
     background-color: RoyalBlue;

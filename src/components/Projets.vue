@@ -1,82 +1,121 @@
 <template>
-<div>
-<h1>Mes projets</h1>
-<main>
-		
-		<figure class="image_2">
-			<img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/331810/sample33.jpg">
-			<figcaption>Image 2</figcaption>
-		</figure>
+  <div class="realisations">
+    <h3>Projets</h3>
+    <div class="container">
+      <div class="liste">
+        <li v-bind:key="real.image" v-for="real in reals">
+          <figure>
+            <router-link class="desc" v-bind:to="`/Projet/${real.project_id}`"><img class="logoReal" v-bind:src="real.image">
+            <figcaption class="titre">{{real.project_name}}</figcaption></router-link>
+          </figure>
 
-    <figure class="image_2">
-			<img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/331810/sample33.jpg">
-			<figcaption>Image 2</figcaption>
-		</figure>
-    
-    <figure class="image_2">
-			<img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/331810/sample33.jpg">
-			<figcaption>Image 2</figcaption>
-		</figure>
-		
-	</main>
-</div>
+		   <figure>
+            <router-link class="desc" v-bind:to="`/Projet/${real.project_id}`"><img class="logoReal" v-bind:src="real.image">
+            <figcaption class="titre">{{real.project_name}}</figcaption></router-link>
+          </figure>
+        </li>
+      </div>
+    </div>
+
+  </div>
 </template>
 
 <script>
+import axios from 'axios'
+
 export default {
   name: 'Projets',
   data () {
     return {
+      reals: {}
     }
+  },
+  created () {
+	  console.log('coucou');
+        axios.get('http://localhost/PWA/static/projects.php')
+      .then(response => {
+        console.log(response)
+        this.reals = response.data
+        // this.comp = JSON.parse(response.data)
+      })
+      .catch(Err => {
+        // console.log(err)
+      })
   }
 }
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
-body{
-	font-family: 'Raleway';
-}
 
-main{
-	display: flex;
-	flex-direction: row;
-	justify-content: space-around;
-}
 
+@media screen and (max-width: 640px){
+.nav{
+ display: flex;
+ justify-content: space-around;
+ position: fixed;
+ width: 100%;
+ padding-top: 3%;
+ bottom: 0;
+ background-color: #ddf2ff;
+ border-top: #003150 solid 2px;
+}
+.desc{
+  width: 50px;
+  height: 50px;
+}
+.logo{
+  width: 90%;
+  height: 90%;
+}
+h4{
+  font-family: "blue";
+  font-size: 18px;
+  color: #003150;
+  margin-left: 10%;
+}
+.liste{
+  list-style: none;
+  text-align: center;
+  display: inline;
+}
+li{
+  display: inline;
+}
 figure{
-	position: relative;
-	height: 150px;
-	margin-right: 10px;
-	margin-left: 10px;
+  width: 50%;
+  height: 50%;
+  margin: auto;
+  margin-bottom: 20%;
+  display: inline-block;
+  position: relative;
 }
-
-figcaption{
-	text-align: center;
-	position: absolute;
-	width: 100%;
-	bottom: -30px;
+.logoReal{
+  width: 50%;
+  height: 50%;
+  margin: auto;
+  border-radius: 15px;
 }
-
-figure:hover figcaption{
-	visibility: visible;
+.titre{
+  color: #003150;
+  text-align: center;
+  height: 40%;
+  width: 100%;
+  margin: auto;
+  position: absolute;
 }
-
-
-.image_2{
-	overflow: hidden;
+a{
+  text-decoration: none;
+  font-family: "blue";
+  font-size: 22px;
 }
-
-.image_2 img{
-	transition: 0.8s;
-	filter: blur(5px);
+.container{
+  width: 90%;
+  text-align: justify;
+  margin: auto;
 }
-
-.image_2 img:hover{
-  	transform: scale(1.15);
-  	filter: blur(0px);
+.realisations{
+  margin-bottom: 25%;
 }
-
-
-
+}
 </style>

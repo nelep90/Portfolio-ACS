@@ -26,14 +26,16 @@
     <span></span>
     <span></span>
     <span></span>
-    
-    <ul id="menu" >
-      <li   v-for="menuElem in menuElements" v-bind:key="menuElem.name" class="nav-item">
+   
+    <ul  id="menu" >
+      <li  v-for="menuElem in menuElements" v-bind:key="menuElem.name" class="nav-item">
                                 <router-link :to="menuElem.url">{{menuElem.name}}</router-link>
                             </li>
     </ul>
   </div>
+  
 </nav>
+
 </template>
 
 <script>
@@ -64,12 +66,20 @@ export default {
         }
       ]
     };
-  }
+  },isShowing:true,
 };
 
 </script>
 
 <style lang="scss" scoped>
+iframe {
+  display:block;
+  margin-top: 20px;
+  margin-left: 200px;
+  width:850px;
+  height:300px;
+}
+
  ul {
         display: flex;
         justify-content: space-between;
@@ -139,6 +149,7 @@ a:hover
 
 #menuToggle span
 {
+  
   display: block;
   width: 33px;
   height: 4px;

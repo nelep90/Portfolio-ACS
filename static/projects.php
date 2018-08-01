@@ -1,7 +1,7 @@
 <?php
 header("Access-Control-Allow-Origin: *");
 require_once('./bdd.php');
-$req = $bdd->prepare("SELECT image, project_name , description from projects ");
+$req = $bdd->prepare("SELECT project_id, image, project_name , description from projects ");
 $req->execute();
 $response = $req->fetchAll(PDO::FETCH_ASSOC);
 echo json_encode($response, JSON_UNESCAPED_UNICODE);

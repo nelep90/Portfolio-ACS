@@ -7,7 +7,8 @@
           <figure>
             <router-link class="desc" v-bind:to="`/Projet/${real.project_id}`"><img class="logoReal" v-bind:src="real.image">
             <figcaption class="titre">{{real.project_name}}</figcaption></router-link>
-          </figure>
+            <p></p>
+		  </figure>
 		  
         </li>
       </div>

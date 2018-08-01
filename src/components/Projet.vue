@@ -1,26 +1,17 @@
 <template>
-  <div class="realisation">
+  <div class="Projet">
     <h3>Projet</h3>
-    <h4>{{real.nom}}</h4>
+    <h4>{{real.project_name}}</h4>
     <h5>Description</h5>
-    <p class="descrip">{{reali.description}}</p>
+    <p class="descrip">{{des.description}}</p>
     <div>
     </div>
-    <ul>
-      <li v-bind:key="img.url" v-for="img in imgs.url">
-        <img class="imgProjet" v-bind:src="img.url">
+    <!-- <ul>
+      <li v-bind:key="img.image" v-for="img in imgs.image">
+        <img class="imgProjet" v-bind:src="img.image">
       </li>
-    </ul>
-    <h5>Compétences utilisées</h5>
-    <ul>
-      <li v-bind:key="com.adresse" v-for="com in comp.adresse">
-        <img class="imgComp" v-bind:src="com.adresse">
-      </li>
-    </ul>
-    <a v-bind:href="`${realisa.github}`" target="_blank"><button class="btn">Voir le code</button></a>
-    <a v-bind:href="`${realis.adresse}`" target="_blank"><button class="btn">Voir le projet</button></a>
-
-   
+    </ul>   
+    -->
   </div>
 </template>
 
@@ -31,37 +22,26 @@ export default {
   name: 'Projet',
   data () {
    return{
-    proj:{'project_name':''},
+    real:{'project_name':''},
     des:{'description':''},
-    img:{'image':''},
-    pgr:{'programing_lng':''},
-    tec:{'techno':''},
-    link:{'url':''}
+    // img:{'image':''},
+    // pgr:{'programing_lng':''},   
+    // tec:{'techno':''},
+    // link:{'url':''}
     }
   }, 
-  created () {
-    this.id = this.$route.params[0]
+    created () {  
+    this.id = this.$route.params
+      console.log('lol' + this.$route.params.id);
+    
     axios.get('http://localhost/PWA/static/projects.php/' + this.id)
-      .then(response => {
-        var competences = response.data.competences
-        var images = response.data.Images
-        // console.log(images)
+      .then(response => {       
+        //  console.log(project_name)
         // console.log(response.data)
-        this.proj.project_name = response.data.project_name
+        this.real.project_name = response.data.project_name
         this.des.description = response.data.description
-        this.link.url = response.data.url
-        // this.realisa.github = response.data.github
-        var dataAdresse = []
-        var dataUrl = []
-        for (let image of images) {
-          axios.get('http://localhost/PWA/static/projects.php/' + image)
-            .then(response => {
-              console.log(response.data)
-              dataUrl.push(response.data)
-            })
-        }      
-        this.comp.adresse = dataAdresse
-        this.imgs.url = dataUrl
+        // this.img.image = response.data.image            
+                 
       })
   }
 }

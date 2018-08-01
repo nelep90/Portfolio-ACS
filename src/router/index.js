@@ -4,6 +4,7 @@ import Home from '@/components/Home'
 import About from '@/components/About'
 import Cv from '@/components/Cv'
 import Projets from '@/components/Projets'
+import Projet from '@/components/Projet'
 import Contact from '@/components/Contact'
 
 Vue.use(Router)
@@ -19,6 +20,11 @@ export default new Router({
       path: '/Projets',
       name: 'Projets',
       component: Projets
+    },
+    {
+      path: '/Projet/:id',
+      name: 'Projet',
+      component: Projet
     },
     {
       path: '/Cv',

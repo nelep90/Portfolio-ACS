@@ -1,116 +1,89 @@
 <template>
-  <div class="Projet">
-    <h3>Projet</h3>
-    <h4>{{real.project_name}}</h4>
-    <h5>Description</h5>
-    <p class="descrip">{{des.description}}</p>
-    <div>
+<div>
+   <h1> Voici la liste des différents projets que j'ai réalisé :</h1>
+      <div class="text">
+        <div v-bind:key="comp" v-for="comp in comps"> 
+          <div class="pj txt" id="pj-name">Nom du projet : {{comp.project_name}}</div>
+              <img class="image-projet" v-bind:src="`${comp.image}`" alt="">
+               <!-- <div v-bind:key="im" v-for="im in lol"> 
+              <img class="image-projet" v-bind:src="`${im.picture_2}`" alt=""> -->
+        
+        <div class="pj txt" id="pj-des"> Description du projets : {{comp.description}}</div>
+   <div id="lk"> <button class="mybtn">    <a :href="`${ comp.url}`" target="_blank"> <p class="decouvrir" >Lien vers le site WEB</p></a></button> </div>
+
+
+        </div>
+      </div>
     </div>
-    <!-- <ul>
-      <li v-bind:key="img.image" v-for="img in imgs.image">
-        <img class="imgProjet" v-bind:src="img.image">
-      </li>
-    </ul>   
-    -->
-  </div>
+
 </template>
 
 <script>
 import axios from 'axios'
-
 export default {
-  name: 'Projet',
+  name: 'projects',
   data () {
-   return{
-    real:{'project_name':''},
-    des:{'description':''},
-    // img:{'image':''},
-    // pgr:{'programing_lng':''},   
-    // tec:{'techno':''},
-    // link:{'url':''}
+    return {
+      comps: {}
     }
-  }, 
-    created () {  
-    this.id = this.$route.params
-      console.log('lol' + this.$route.params.id);
-    
-    axios.get('http://localhost/PWA/static/projects.php/' + this.id)
-      .then(response => {       
-        //  console.log(project_name)
-        // console.log(response.data)
-        this.real.project_name = response.data.project_name
-        this.des.description = response.data.description
-        // this.img.image = response.data.image            
-                 
+  },
+  created () {
+    axios.get('http://localhost/PWA/static/projects.php')
+      .then(response => {
+        this.comps = response.data
+        console.log(response.data);
       })
-  }
+      .catch(Err => {
+      })
+  },
+  
+
 }
 </script>
 
-<!-- Add "scoped" attribute to limit CSS to this component only -->
-<style scoped>
-
-
-@media screen and (max-width: 640px){
-.nav{
- display: flex;
- justify-content: space-around;
- position: fixed;
- width: 100%;
- padding-top: 3%;
- bottom: 0;
- background-color: #ddf2ff;
- border-top: #003150 solid 2px;
+<style>
+#lk {
+     padding-top: 5vh;
+    padding-bottom: 10vh;
 }
-.desc{
-  width: 50px;
-  height: 50px;
+.mybtn {
+     text-decoration: none;
+    color: #333;
+    background-color: #fff;
+    border-color: #ccc;
+    display: inline-block;
+    padding: 6px 12px;
+    margin-bottom: 0;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 1.42857143;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: middle;
+    -ms-touch-action: manipulation;
+    touch-action: manipulation;
+    cursor: pointer;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    background-image: none;
+    border: 1px solid transparent;
+    border-radius: 4px;
+    display: flex;
+    margin: auto;
 }
-.logo{
-  width: 90%;
-  height: 90%;
-}
-h4{
-  font-family: "blue";
-  font-size: 24px;
-  color: black;
-  text-align: center;
-}
-h5{
-  color: #003150;
-  font-family: "blue";
-  font-size: 20px;
-  margin-left: 6%;
-}
-.descrip{
-  color: black;
-}
-a{
-  text-decoration: none;
-}
-ul{
-  padding: 0;
-  -webkit-padding-start: 0;
-  text-align: center;
-  margin: 0;
-}
-li{
-  list-style: none;
-  display: inline;
-  margin: auto;
-}
-.imgProjet{
-  width: 40%;
-  height: 40%;
-  margin: 1%;
-}
-.imgComp{
-  width: 30%;
-  height: 30%;
-  margin: 1%;
-}
-.projet{
-  margin-bottom: 25%;
-}
+.image-projet {
+width: 98%;
+margin: 0 auto;
+	border-radius: 3px;
+	box-shadow: 0 3px 6px rgba(0,0,0,0.9);
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+  }
+.pj {
+  font-size: 3vh;
+  padding-top: 3vh;
 }
 </style>

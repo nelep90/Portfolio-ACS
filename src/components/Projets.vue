@@ -1,118 +1,91 @@
 <template>
-  <div class="realisations">
-    <h3>Projets</h3>
-    <div class="container">
-      <div class="liste">
-        <li v-bind:key="real.image" v-for="real in reals">
-          <figure>
-            <router-link class="desc" v-bind:to="`/Projet/${real.project_id}`"><img class="logoReal" v-bind:src="real.image">
-            <figcaption class="titre">{{real.project_name}}</figcaption></router-link>
-            <p></p>
-		  </figure>
-		  
-        </li>
+<div>
+   <h1> Voici la liste des différents projets que j'ai réalisé :</h1>
+      <div class="text">
+        <div v-bind:key="comp" v-for="comp in comps"> 
+          <div class="pj txt" id="pj-name">Nom du projet : {{comp.project_name}}</div>
+              <img class="image-projet" v-bind:src="`${comp.image}`" alt="">
+               <!-- <div v-bind:key="im" v-for="im in lol"> 
+              <img class="image-projet" v-bind:src="`${im.picture_2}`" alt=""> -->
+        
+        <div class="pj txt" id="pj-des"> Description du projets : {{comp.description}}</div>
+		<div class="pj txt" id="pj-des">  Langage de programation utilisé: {{comp.programing_lng}}</div>
+		<div class="pj txt" id="pj-des"> Technologie utilisée: {{comp.techno}}</div>
+   <div id="lk"> <button class="mybtn">    <a :href="`${ comp.url}`" target="_blank"> <p class="decouvrir" >Lien vers le site WEB</p></a></button> </div>
+
+
+        </div>
       </div>
     </div>
 
-  </div>
 </template>
 
 <script>
 import axios from 'axios'
-
 export default {
-  name: 'Projets',
+  name: 'projects',
   data () {
     return {
-      reals: {}
+      comps: {}
     }
   },
   created () {
-	  console.log('coucou');
-        axios.get('http://localhost/PWA/static/projects.php')
+    axios.get('http://localhost/PWA/static/projects.php')
       .then(response => {
-        console.log(response)
-        this.reals = response.data
-        // this.comp = JSON.parse(response.data)
+        this.comps = response.data
+        console.log(response.data);
       })
       .catch(Err => {
-        // console.log(err)
       })
-  }
+  },
+  
+
 }
 </script>
 
-<!-- Add "scoped" attribute to limit CSS to this component only -->
-<style scoped>
-
-
-@media screen and (max-width: 640px){
-.nav{
- display: flex;
- justify-content: space-around;
- position: fixed;
- width: 100%;
- padding-top: 3%;
- bottom: 0;
- background-color: #ddf2ff;
- border-top: #003150 solid 2px;
+<style>
+#lk {
+     padding-top: 5vh;
+    padding-bottom: 10vh;
 }
-.desc{
-  width: 50px;
-  height: 50px;
+.mybtn {
+     text-decoration: none;
+    color: #333;
+    background-color: #fff;
+    border-color: #ccc;
+    display: inline-block;
+    padding: 6px 12px;
+    margin-bottom: 0;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 1.42857143;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: middle;
+    -ms-touch-action: manipulation;
+    touch-action: manipulation;
+    cursor: pointer;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    background-image: none;
+    border: 1px solid transparent;
+    border-radius: 4px;
+    display: flex;
+    margin: auto;
 }
-.logo{
-  width: 90%;
-  height: 90%;
-}
-h4{
-  font-family: "blue";
-  font-size: 18px;
-  color: #003150;
-  margin-left: 10%;
-}
-.liste{
-  list-style: none;
-  text-align: center;
-  display: inline;
-}
-li{
-  display: inline;
-}
-figure{
-  width: 50%;
-  height: 50%;
-  margin: auto;
-  margin-bottom: 20%;
-  display: inline-block;
-  position: relative;
-}
-.logoReal{
-  width: 50%;
-  height: 50%;
-  margin: auto;
-  border-radius: 15px;
-}
-.titre{
-  color: #003150;
-  text-align: center;
-  height: 40%;
-  width: 100%;
-  margin: auto;
-  position: absolute;
-}
-a{
-  text-decoration: none;
-  font-family: "blue";
-  font-size: 22px;
-}
-.container{
-  width: 90%;
-  text-align: justify;
-  margin: auto;
-}
-.realisations{
-  margin-bottom: 25%;
-}
+.image-projet {
+width: 98%;
+margin: 0 auto;
+	border-radius: 3px;
+	box-shadow: 0 3px 6px rgba(0,0,0,0.9);
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+  }
+.pj {
+  font-size: 3vh;
+  padding-top: 3vh;
 }
 </style>

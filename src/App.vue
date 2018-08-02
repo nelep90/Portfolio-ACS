@@ -1,17 +1,17 @@
 <template>
-<body>
+
   <div id="app">
         <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css" integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt" crossorigin="anonymous">
     <header>      
-      <h1>Hello Salut  3драво </h1> 
+      <h1 class="pad">Hello Salut  3драво </h1> 
       <h2>My name is Nenad Pašajlić  and welcome to my portfolio page</h2>
          <menu-header></menu-header>  
     </header>
     
     <router-view/>
-<section class="main">
+<!-- <section class="main">
        
-         </section>
+         </section> -->
     <footer class="footer">
       <div class="left_footer">
         <h4>Contact</h4>
@@ -25,7 +25,7 @@
  <p class="center gray">Copyright Nenad Pasajlic</p>
    </footer>
   </div>
-  </body>
+
 </template>
 <script>
 import MenuHeader from './components/MenuHeader'  
@@ -42,12 +42,11 @@ html,body {
   margin: 0;
     padding: 0;   
     width: 100%;
-    
+    height: 100%;
 }
 
-  #app {   
-    
-    width: 100%;
+  #app {       
+    width: 100%;  
     font-family: 'Avenir', Helvetica, Arial, sans-serif;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
@@ -55,10 +54,15 @@ html,body {
     color: #2c3e50;    
   }
 
-
+.pad{
+  padding: 0;
+  margin: 0;
+  padding: 4%;
+}
 .center{
   text-align: center;
   justify-content: center;
+  padding: 2%;
 }
 .gray{
 color: gray;
@@ -73,20 +77,24 @@ color: gray;
   width: 100%;
   height: 200px; 
   margin: 0;
-  padding: 0;  
-  background: url("./assets/images/header.jpg");
+  padding: 0;   
+  background-image: url("./assets/images/header.jpg");
   background-repeat: no-repeat;
   background-position: center;
   color: white;
-  
+}
+
+header > h1,h2{
+  margin: 2%;
 }
 
   /*footer */
 footer{
 width: 100%;
+padding: 0;
+margin: 0;
 bottom:0;
 right: 0;
-bottom: 0;
 left: 0;
 height: auto;
 color: white;
@@ -94,17 +102,18 @@ background-color: black;
 
 }
 footer  p{
-  font-size: 9px;
+  font-size: 10px;  
 }
 .left_footer{ 
+      width: auto;
+  padding-top: 2%;
+    margin-left: 7%;
     text-align: left;
-    width: 100%;
     color: gray;
-    margin-top: 5%;
-    margin-left: 5%;
-    padding: 2%;
+
+   
     height: auto;
-}
+    }
 
 .cnt_logo_footer{
   width: 15px;

@@ -3,7 +3,7 @@
 
  <img class="img_cv" src="/static/pdf/cv.jpg" alt="cv">
   
-<a href="./static/pdf/cv.pdf"><button class="btn"><i class="fa fa-download"></i> Telecharger</button> </a> 
+<a href="./static/pdf/cv.pdf" class="button" download><button class="btn"><i class="fa fa-download"></i> Telecharger</button> </a> 
 
    
 </div>
@@ -34,6 +34,7 @@ export default {
   width: 90%;
 }
 .btn {
+    margin-bottom: 4%;
     background-color: DodgerBlue;
     border: none;
     color: white;

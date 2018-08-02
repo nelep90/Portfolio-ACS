@@ -97,7 +97,7 @@ body
 {
   margin: 0;
   padding: 0;
-  
+  margin-left: 15%;
   /* make it look decent enough */
   background: #232323;
   color: #cdcdcd;
@@ -123,8 +123,6 @@ a:hover
   display: block;
   position: relative;
   top: 0px;
-  left: 15px;
-  
   z-index: 1;
   
   -webkit-user-select: none;

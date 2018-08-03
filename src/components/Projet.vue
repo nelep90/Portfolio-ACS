@@ -1,4 +1,4 @@
-x<template>
+<template>
 <div>
    <h1> Voici la liste des différents projets que j'ai réalisé :</h1>
       <div class="text">

@@ -78,7 +78,7 @@ color: gray;
   height: 200px; 
   margin: 0;
   padding: 0;   
-  background-image: url("../static/assets/images/header.jpg");
+  background-image: url("https://nenadp.promo-17.codeur.online/dist/static/assets/images/header.jpg");
   background-repeat: no-repeat;
   background-position: center;
   color: white;

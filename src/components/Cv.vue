@@ -1,7 +1,7 @@
 <template>
 <div class="#app">
 
- <img class="img_cv" src="/static/assets/images/cv.jpg" alt="cv">
+ <img class="img_cv" src="https://nenadp.promo-17.codeur.online/dist/static/assets/images/cv.jpg" alt="cv">
   
 <a href="/static/assets/pdf/cv.pdf" class="button" download><button class="btn"><i class="fa fa-download"></i> Telecharger</button> </a> 
 

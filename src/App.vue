@@ -1,5 +1,4 @@
 <template>
-
   <div id="app">
         <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css" integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt" crossorigin="anonymous">
     <header>      
@@ -52,6 +51,7 @@ html,body {
     -moz-osx-font-smoothing: grayscale;
     text-align: center;
     color: #2c3e50;    
+    margin-bottom: 20%;
   }
 
 .pad{
@@ -88,6 +88,7 @@ header > h1,h2{
   margin: 2%;
 }
 .navbar {
+  display: flex;
   justify-content: center;
   overflow: hidden;
   background-color: black;
@@ -97,6 +98,7 @@ header > h1,h2{
 }
 
 .navbar a {
+  
   float: left;
   display: block;
   color: #f2f2f2;

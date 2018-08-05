@@ -1,5 +1,5 @@
 <template>
-<div class="app">
+<div id="#app">
    <h1> Mes projets</h1>
       <div class="text">
         <div v-bind:key="comp" v-for="comp in comps"> 
@@ -61,6 +61,10 @@ margin: 0 auto;
     margin-left: auto;
     margin-right: auto;
   }
+  .image-projet:hover{
+    background-color: white;
+    opacity: 0.5;
+  }
  
 .pj {
   font-size: 0.9em;
@@ -69,6 +73,11 @@ margin: 0 auto;
 .icon{
   color: black;
     font-size:35px;
+}
+.icon:hover
+{
+   background-color: white;
+    opacity: 0.5;
 }
 .line{
   width: 90%;

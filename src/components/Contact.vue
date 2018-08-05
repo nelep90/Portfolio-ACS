@@ -1,4 +1,5 @@
 <template>
+<div id="#app">
 <div class="contact">
     <h3>Contact</h3>    
     <form id="form" class="form" @submit.prevent="onSubmit" method="post" action="static/model/traitement_formulaire.php">
@@ -34,6 +35,7 @@
       <button class="btn" name="envoi" type="submit" @click="validate"><span class="center">Envoyer</span></button>
     </form>
     
+  </div>
   </div>
 
 

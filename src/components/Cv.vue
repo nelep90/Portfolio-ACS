@@ -1,5 +1,5 @@
 <template>
-<div class="#app">
+<div id="#app">
 
  <img class="img_cv" src="https://nenadp.promo-17.codeur.online/dist/static/assets/images/cv.jpg" alt="cv">
   
@@ -42,7 +42,10 @@ export default {
     cursor: pointer;
     font-size: 20px;
 }
-
+.btn:hove{
+      background-color: white;
+    opacity: 0.5;
+}
 cv_css{
   margin: 5%;
 }

@@ -237,7 +237,6 @@ export default {
 .navbar a:hover {
   background: white;
   color: black;
-
 }
 
 .navbar a.active {

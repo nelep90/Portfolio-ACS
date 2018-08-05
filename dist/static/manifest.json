@@ -13,7 +13,11 @@
         "type": "image/png"
       }
     ],
+<<<<<<< HEAD
     "start_url": "/dist/",
+=======
+    "start_url": "https://nenadp.promo-17.codeur.online/dist",
+>>>>>>> 70edd8f4764da20f31901bb2a923464e3d8daf2c
     "display": "fullscreen",
     "background_color": "grey",
     "theme_color": "black"
